@@ -1,19 +1,21 @@
 public class NextDayCalculator {
     public static int[] findNextDay(int day, int month, int year) {
-        int dayResult = 0;
-        int monthResult = 0;
-        int yearResult = 0;
+        int dayResult;
+        int monthResult;
+        int yearResult;
         if (day < 28) {
             dayResult = day + 1;
-        } else {
-            dayResult = 1;
-        }
-        if (day < 28) {
             monthResult = month;
         } else {
+            dayResult = 1;
             monthResult = month + 1;
         }
-        yearResult = year;
+        if (month < 12) {
+            yearResult = year;
+        } else {
+            monthResult = 1;
+            yearResult = year + 1;
+        }
         return new int[]{dayResult, monthResult, yearResult};
     }
 }
