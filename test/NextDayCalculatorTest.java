@@ -17,4 +17,18 @@ class NextDayCalculatorTest {
         int[] actualResult = NextDayCalculator.findNextDay(day,month,year);
         assertArrayEquals(expectedResult,actualResult);
     }
+
+    @DisplayName("Test with day 31 month 1 year 2018")
+    @Test
+    void testFindNextDayCase2() {
+        int day = 31;
+        int month = 1;
+        int year = 2018;
+        int expectedDay = 1;
+        int expectedMonth = 2;
+        int expectedYear = 2018;
+        int[] expectedResult = {expectedDay,expectedMonth,expectedYear};
+        int[] actualResult = NextDayCalculator.findNextDay(day,month,year);
+        assertArrayEquals(expectedResult,actualResult);
+    }
 }
