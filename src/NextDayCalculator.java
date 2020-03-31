@@ -3,12 +3,12 @@ public class NextDayCalculator {
         int dayResult = 0;
         int monthResult = 0;
         int yearResult = 0;
-        if (day < 30) {
+        if (day < 28) {
             dayResult = day + 1;
         } else {
             dayResult = 1;
         }
-        if (day < 30) {
+        if (day < 28) {
             monthResult = month;
         } else {
             monthResult = month + 1;
